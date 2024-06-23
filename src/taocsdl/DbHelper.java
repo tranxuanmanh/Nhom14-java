@@ -10,7 +10,7 @@ public class DbHelper {
         private static Connection conn=null;
 	private final static String DB_URL="jdbc:mysql://localhost:3306/qlbh";
 	private final static String USER_NAME="root";
-	private final static String PASSWORD="";
+	private final static String PASSWORD="123456789";
         
 	public static Connection getConnect() throws ClassNotFoundException {
 		try {

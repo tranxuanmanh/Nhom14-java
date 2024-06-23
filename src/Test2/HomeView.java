@@ -1,5 +1,6 @@
 package Test2;
 
+import DangNhap.MenuList;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
@@ -7,9 +8,7 @@ import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.ObjectInputStream;
 import java.text.DecimalFormat;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +24,6 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
@@ -72,7 +70,7 @@ public class HomeView extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\user\\eclipse-workspace1\\img\\system-file-manager-icon.png"));
 		setTitle("Home manager");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 829, 628);
+		setBounds(100, 100, 829, 678);
 		cpHome = new JPanel();
 		cpHome.setBackground(new Color(245, 255, 250));
 		cpHome.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -84,39 +82,39 @@ public class HomeView extends JFrame {
 		JLabel lblName = new JLabel("Name");
 		lblName.setHorizontalAlignment(SwingConstants.LEFT);
 		lblName.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblName.setBounds(59, 121, 90, 28);
+		lblName.setBounds(62, 164, 90, 28);
 		cpHome.add(lblName);
 		
 		JLabel lblBrand = new JLabel("Brand");
 		lblBrand.setHorizontalAlignment(SwingConstants.LEFT);
 		lblBrand.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblBrand.setBounds(444, 121, 90, 28);
+		lblBrand.setBounds(447, 164, 90, 28);
 		cpHome.add(lblBrand);
 		
 		JLabel lblPrice = new JLabel("Price");
 		lblPrice.setHorizontalAlignment(SwingConstants.LEFT);
 		lblPrice.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblPrice.setBounds(59, 169, 90, 28);
+		lblPrice.setBounds(62, 212, 90, 28);
 		cpHome.add(lblPrice);
 		
 		textFieldName = new JTextField();
 		lblName.setLabelFor(textFieldName);
 		textFieldName.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		textFieldName.setBounds(135, 121, 224, 28);
+		textFieldName.setBounds(138, 164, 224, 28);
 		cpHome.add(textFieldName);
 		textFieldName.setColumns(10);
 		
 		textFieldBrand = new JTextField();
 		lblBrand.setLabelFor(textFieldBrand);
 		textFieldBrand.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		textFieldBrand.setBounds(520, 121, 224, 28);
+		textFieldBrand.setBounds(523, 164, 224, 28);
 		cpHome.add(textFieldBrand);
 		textFieldBrand.setColumns(10);
 		
 		textFieldPrice = new JTextField();
 		lblPrice.setLabelFor(textFieldPrice);
 		textFieldPrice.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		textFieldPrice.setBounds(135, 169, 120, 28);
+		textFieldPrice.setBounds(138, 212, 120, 28);
 		cpHome.add(textFieldPrice);
 		textFieldPrice.setColumns(10);
 		
@@ -190,24 +188,23 @@ public class HomeView extends JFrame {
 		
 		btnSearch.setForeground(new Color(0, 0, 205));
 		btnSearch.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnSearch.setBounds(548, 195, 89, 28);
+		btnSearch.setBounds(551, 238, 89, 28);
 		cpHome.add(btnSearch);
 		
 		btnAdd = new JButton("Add");
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				AddView addView = new AddView(); // Truyền tham chiếu của HienThi vào AddView
-        		addView.setVisible(true);        	
-        		
+                                addView.setVisible(true);     
 			}
 		});
 		btnAdd.setForeground(new Color(0, 0, 205));
 		btnAdd.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnAdd.setBounds(655, 195, 89, 28);
+		btnAdd.setBounds(658, 238, 89, 28);
 		cpHome.add(btnAdd);
 		
 		
-		DefaultTableModel model = new DefaultTableModel();
+	DefaultTableModel model = new DefaultTableModel();
         model.addColumn("STT");
         model.addColumn("ID");
         model.addColumn("Name");
@@ -216,13 +213,13 @@ public class HomeView extends JFrame {
         model.addColumn("Processor");
         model.addColumn("Price");
         model.addColumn("Total");
-        model.addColumn("Sửa");
-        model.addColumn("Xóa");
+        model.addColumn("");
+        model.addColumn("");
 
         table = new JTable(model);
         table.setFont(new Font("Tahoma", Font.PLAIN, 15));
         JScrollPane scrollPane = new JScrollPane(table);
-        scrollPane.setBounds(59, 305, 685, 255);
+        scrollPane.setBounds(62, 348, 685, 267);
         cpHome.add(scrollPane);
         
         cbSort = new JComboBox();
@@ -234,30 +231,42 @@ public class HomeView extends JFrame {
         cbSort.setFont(new Font("Tahoma", Font.PLAIN, 15));
         cbSort.setModel(new DefaultComboBoxModel(new String[] {"Ascending", "Decrease"}));
         cbSort.setSelectedIndex(0);
-        cbSort.setBounds(602, 255, 142, 28);
+        cbSort.setBounds(605, 298, 142, 28);
         cpHome.add(cbSort);
         
         JLabel lblSort = new JLabel("Sorted by");
         lblSort.setLabelFor(cbSort);
         lblSort.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        lblSort.setBounds(520, 255, 90, 28);
+        lblSort.setBounds(523, 298, 90, 28);
         cpHome.add(lblSort);
         
         JLabel lblNewLabel = new JLabel("PRODUCT MANAGEMENT");
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setForeground(new Color(255, 69, 0));
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
-        lblNewLabel.setBounds(292, 27, 234, 38);
+        lblNewLabel.setBounds(295, 70, 234, 38);
         cpHome.add(lblNewLabel);
         
         JLabel lblNewLabel_1 = new JLabel("Enter search information");
         lblNewLabel_1.setFont(new Font("Tahoma", Font.ITALIC, 15));
-        lblNewLabel_1.setBounds(59, 85, 182, 19);
+        lblNewLabel_1.setBounds(62, 128, 182, 19);
         cpHome.add(lblNewLabel_1);
+        
+        JButton btnNewButton = new JButton("Home");
+        btnNewButton.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		dispose();
+                new MenuList("","").setVisible(true);
+        	}
+        });
+        btnNewButton.setForeground(new Color(0, 0, 128));
+        btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
+        btnNewButton.setBounds(63, 30, 89, 28);
+        cpHome.add(btnNewButton);
 		
 		
-		//Cấu hình Edit
-		TableColumn editColumn = table.getColumnModel().getColumn(8);
+	//Cấu hình Edit
+	TableColumn editColumn = table.getColumnModel().getColumn(8);
         editColumn.setCellRenderer(new ButtonRenderer());
         editColumn.setCellEditor(new ButtonEditor(new JCheckBox(), "Edit"));
         
@@ -271,7 +280,7 @@ public class HomeView extends JFrame {
 	
 	public void updateTable() {
 		int selected = cbSort.getSelectedIndex();
-        displayDataInTable(selected == 0);
+                displayDataInTable(selected == 0);
 	}
 	
 	public void displayDataInTable(boolean acs) {
