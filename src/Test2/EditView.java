@@ -222,7 +222,7 @@ public class EditView extends JFrame {
 	        });
 		 btnSave.setForeground(new Color(0, 0, 205));
 	        btnSave.setFont(new Font("Tahoma", Font.BOLD, 16));
-	        btnSave.setBounds(321, 424, 96, 30);
+	        btnSave.setBounds(212, 424, 96, 30);
 	        cpEdit.add(btnSave);
 		
 		JButton btnNewButton = new JButton("Cancel");
@@ -236,5 +236,25 @@ public class EditView extends JFrame {
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnNewButton.setBounds(425, 424, 96, 30);
 		cpEdit.add(btnNewButton);
+		
+		JButton btnReset = new JButton("Reset");
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				reset();
+			}
+		});
+		btnReset.setForeground(new Color(0, 0, 205));
+		btnReset.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btnReset.setBounds(318, 424, 96, 30);
+		cpEdit.add(btnReset);
+	}
+	
+	public void reset() {
+		textFieldName.setText("");
+		textFieldBrand.setText("");
+		textFieldMemory.setText("");
+		textFieldProcessor.setText("");
+		textFieldPrice.setText("");
+		textFieldTotal.setText("");
 	}
 }
