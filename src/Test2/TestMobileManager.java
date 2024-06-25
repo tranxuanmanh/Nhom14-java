@@ -1,5 +1,6 @@
 package Test2;
 
+import Test12.Mobile;
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -12,7 +13,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-import Test12.Mobile;
 
 public class TestMobileManager implements mobileManager {
 

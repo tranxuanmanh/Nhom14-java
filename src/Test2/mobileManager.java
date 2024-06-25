@@ -1,8 +1,8 @@
 package Test2;
 
+import Test12.Mobile;
 import java.util.List;
 
-import Test12.Mobile;
 
 public interface mobileManager {
 	public boolean addMobile(Mobile m);

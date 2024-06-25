@@ -1,5 +1,6 @@
 package Test12;
 
+
 import java.util.List;
 
 public interface MobileManager {
@@ -15,7 +16,7 @@ public interface MobileManager {
 	public void generateList(int n);
 	public void printInfo(List<Mobile> mobiles);
 	static List<Mobile> getAll() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 }
