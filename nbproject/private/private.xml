@@ -3,10 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/Java_OOP/DangNhap/src/DangNhap/Login.java</file>
             <file>file:/D:/Java_OOP/DangNhap/src/DangNhap/MenuList.java</file>
             <file>file:/D:/Java_OOP/DangNhap/src/DangNhap/QuanLi.java</file>
             <file>file:/D:/Java_OOP/DangNhap/src/DangNhap/TimKiem.java</file>
+=======
+            <file>file:/C:/Users/user/Downloads/Java/Nhom14-java/src/Test2/AddView.java</file>
+            <file>file:/C:/Users/user/Downloads/Java/Nhom14-java/src/Test2/HomeView.java</file>
+            <file>file:/C:/Users/user/Downloads/Java/Nhom14-java/src/Test2/EditView.java</file>
+            <file>file:/C:/Users/user/Downloads/Java/Nhom14-java/src/DangNhap/Login.java</file>
+>>>>>>> 26d6cf159da925876e6bd2c421996358799537d8
         </group>
     </open-files>
 </project-private>

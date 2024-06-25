@@ -1,6 +1,12 @@
+<<<<<<< HEAD:src/Interior_Sang/InteriorMangerView.java
 package Interior_Sang;
 
 import ALogin_Menu.MenuList;
+=======
+package Sang;
+
+import DangNhap.MenuList;
+>>>>>>> 26d6cf159da925876e6bd2c421996358799537d8:src/Sang/InteriorMangerView.java
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -31,8 +37,13 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
+<<<<<<< HEAD:src/Interior_Sang/InteriorMangerView.java
 import Interior_Sang.InteriorManagerController;
 import Interior_Sang.Interior;
+=======
+import Sang.InteriorManagerController;
+import Sang.Interior;
+>>>>>>> 26d6cf159da925876e6bd2c421996358799537d8:src/Sang/InteriorMangerView.java
 import java.awt.event.ActionEvent;
 
 

@@ -7,7 +7,11 @@ import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+<<<<<<< HEAD:src/Interior_Sang/InteriorManagerController.java
 import ALogin_Menu.MenuList;
+=======
+import DangNhap.MenuList;
+>>>>>>> 26d6cf159da925876e6bd2c421996358799537d8:src/Sang/InteriorManagerController.java
 
 public class InteriorManagerController implements ActionListener, ListSelectionListener {
 	

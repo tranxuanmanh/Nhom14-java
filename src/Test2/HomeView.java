@@ -1,6 +1,10 @@
 package Test2;
 
+<<<<<<< HEAD
 import ALogin_Menu.*;
+=======
+import DangNhap.MenuList;
+>>>>>>> 26d6cf159da925876e6bd2c421996358799537d8
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;

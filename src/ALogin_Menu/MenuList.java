@@ -1,8 +1,18 @@
+<<<<<<< HEAD:src/ALogin_Menu/MenuList.java
 
 package ALogin_Menu;
 import Tivi_Manh.*;
 import Mobiles_Minh.*;
 import Interior_Sang.InteriorMangerView;
+=======
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package DangNhap;
+import Sang.InteriorMangerView;
+import Mobiles.*;
+>>>>>>> 26d6cf159da925876e6bd2c421996358799537d8:src/DangNhap/MenuList.java
 import Test2.*;
 import java.sql.SQLException;
 import java.util.logging.Level;
