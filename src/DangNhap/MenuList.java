@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package DangNhap;
+import Sang.InteriorMangerView;
 import Mobiles.*;
 import Test2.*;
 import Test12.*;

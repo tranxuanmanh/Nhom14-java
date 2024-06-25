@@ -1,5 +1,6 @@
-package DangNhap;
+package Sang;
 
+import DangNhap.MenuList;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -32,6 +33,7 @@ import javax.swing.table.DefaultTableModel;
 
 import Sang.InteriorManagerController;
 import Sang.Interior;
+import java.awt.event.ActionEvent;
 
 
 public class InteriorMangerView extends JFrame{
@@ -220,7 +222,7 @@ public class InteriorMangerView extends JFrame{
 		lbColor.setBounds(467, 49, 98, 15);
 		panel.add(lbColor);
 
-		JLabel lbBattery = new JLabel("Battery Life");
+		JLabel lbBattery = new JLabel("Size");
 		lbBattery.setForeground(new Color(0, 0, 0));
 		lbBattery.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lbBattery.setBounds(467, 102, 98, 15);
@@ -333,14 +335,18 @@ public class InteriorMangerView extends JFrame{
 		btnSearch.setBounds(750, 35, 126, 41);
 		panel_1.add(btnSearch);
                 
-                Button btnReturn = new Button("Quay lai");
-		btnReturn.addActionListener(action);
-		btnReturn.setForeground(SystemColor.desktop);
-		btnReturn.setFont(new Font("Dialog", Font.BOLD, 12));
-		btnReturn.setBackground(new Color(224, 255, 255));
-		btnReturn.setBounds(750, 35, 126, 41);
-		panel_1.add(btnReturn);
-	}
+                
+		Button btnNewButton = new Button("Home");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+                        new MenuList("","").setVisible(true);
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnNewButton.setBackground(new Color(255, 128, 128));
+		btnNewButton.setBounds(822, 95, 77, 55);
+		panel.add(btnNewButton);	}
 	
 	public void reset() {
 		txbID.setText("");

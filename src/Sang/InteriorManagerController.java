@@ -7,7 +7,6 @@ import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import DangNhap.InteriorMangerView;
 import DangNhap.MenuList;
 
 public class InteriorManagerController implements ActionListener, ListSelectionListener {
